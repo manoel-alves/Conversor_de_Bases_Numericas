@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <locale.h>
 #include "convert.c"
 
 void menu() { //imprime o menu de bases numericas
     system("cls");
-    printf("Escolha as bases para conversao:\n");
     printf("--------------------------------\n");
-    printf("(1) decimal\n");
-    printf("(2) binario\n");
-    printf("(3) hexadecimal\n");
-    printf("(4) octal\n");
-    printf("\n(0) [Sair]\n");
+    printf("Escolha as Bases para Conversão:\n");
+    printf("--------------------------------\n");
+    printf("(1) Decimal\n");
+    printf("(2) Binário\n");
+    printf("(3) Hexadecimal\n");
+    printf("(4) Octal\n");
+    printf("\n(0) Sair\n");
     printf("--------------------------------\n");
 }
 
@@ -24,6 +26,9 @@ bool exec_op(char opc1, char opc2) { //executa a conversao escolhida
     while(rpt_op == false) {
                     
         system("cls");
+
+        check_typo = false;
+
         switch (opc1) {
             case '1':
                 if(opc2 == '2') {
@@ -41,7 +46,7 @@ bool exec_op(char opc1, char opc2) { //executa a conversao escolhida
                 if(opc2 == '1') {
                     bin_dec();
                 }
-                else if(opc2 == '2') {
+                else if(opc2 == '3') {
                     bin_hex();
                 }
                 else {
@@ -57,13 +62,31 @@ bool exec_op(char opc1, char opc2) { //executa a conversao escolhida
                     hex_bin();
                 }
                 else {
+
+                    printf("Em desenvolvimento!\n");
+                    printf("\nPressione qualquer tecla para voltar. . .");
+                    getchar();
+                    getchar();
+                    rpt = true;
+                    rpt_op = true;
+                    check_typo = true;
                     hex_oct();
+                
                 }
                 break;
 
             case '4':
                 if(opc2 == '1') {
                     oct_dec();
+
+                    printf("Em desenvolvimento!\n");
+                    printf("\nPressione qualquer tecla para voltar. . .");
+                    getchar();
+                    getchar();
+                    rpt = true;
+                    rpt_op = true;
+                    check_typo = true;
+
                     break;
                 }
                 else if(opc2 == '2') {
@@ -72,11 +95,20 @@ bool exec_op(char opc1, char opc2) { //executa a conversao escolhida
                 }
                 else {
                     oct_hex();
+
+                    printf("Em desenvolvimento!\n");
+                    printf("\nPressione qualquer tecla para voltar. . .");
+                    getchar();
+                    getchar();
+                    rpt = true;
+                    rpt_op = true;
+                    check_typo = true;
+
                     break;
                 }
         }
 
-        check_typo = false;
+        
         while(check_typo == false) {
             printf("\nDeseja repetir? (S/N): ");
             scanf(" %s", &opc);
@@ -146,6 +178,8 @@ bool exec_op(char opc1, char opc2) { //executa a conversao escolhida
 
 int main() { 
     
+    setlocale(LC_CTYPE, "portuguese");
+
     char opc1[50];
     char opc2[50];
     bool rpt = false;
@@ -161,10 +195,10 @@ int main() {
             
             scanf(" %s", &opc1);
 
-            if(opc1[1] != '\0' || (opc1[0] - '0') > 3 || (opc1[0] - '0') < 0 || isalpha(opc1[0])) { //checa se a opcao e valida
+            if(opc1[1] != '\0' || (opc1[0] - '0') > 4 || (opc1[0] - '0') < 0 || isalpha(opc1[0])) { //checa se a opcao e valida
                 check_opc = false;
                 menu();
-                printf("> Opcao Invalida! <\n");
+                printf("> Opção Inválida! <\n");
                 printf("----------------------------------\n");
             }          
             else {
@@ -173,6 +207,7 @@ int main() {
         } 
 
         if(opc1[0] == '0') { //Termina o programa caso o usuario tenha escolhido 0
+            check = true;
             break;
         }
 
@@ -187,7 +222,7 @@ int main() {
             if(opc2[1] != '\0' || opc2[0] == opc1[0] || (opc2[0] - '0') > 4 || (opc2[0] - '0') < 0 || isalpha(opc2[0])) { //checa se e valido
                 check_opc = false;
                 menu();
-                printf("> Opcao invalida! <\n");
+                printf("> Opção Inválida! <\n");
                 printf("----------------------------------\n");
             }
             else {

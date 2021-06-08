@@ -7,7 +7,7 @@
 #include <ctype.h>
 
 void dec_bin() { //converte de decimal para binario
-    printf("Decimal -> Binario\n");
+    printf("Decimal -> Binário\n");
     printf("----------------------------------\n");
 
     int i, dec;
@@ -23,9 +23,9 @@ void dec_bin() { //converte de decimal para binario
             if(isalpha(dec_prov[i])) {
                 check = false;
                 system("cls");
-                printf("Decimal -> Binario\n");
+                printf("Decimal -> Binário\n");
                 printf("-------------------------------------\n");
-                printf(">Caracter invalido! Insira novamente<\n");
+                printf(">Caracter inválido! Insira novamente<\n");
                 printf("-------------------------------------\n");
                 
                 break;
@@ -40,10 +40,10 @@ void dec_bin() { //converte de decimal para binario
     } 
 
     system("cls");
-    printf("Decimal -> Binario\n");
+    printf("Decimal -> Binário\n");
     printf("-------------------------------------\n");
     printf("Decimal: %d\n", dec);
-    printf("Binario: ");
+    printf("Binário: ");
 
     if(dec == 0) { 
         printf("0");
@@ -97,7 +97,7 @@ void dec_oct() { //converte de decimal para octal
                 system("cls");
                 printf("Decimal -> Octal\n");
                 printf("-------------------------------------\n");
-                printf(">Caracter invalido! Insira novamente<\n");
+                printf(">Caracter inválido! Insira novamente<\n");
                 printf("-------------------------------------\n");
                 break;
 
@@ -161,7 +161,7 @@ void dec_oct() { //converte de decimal para octal
 
 void dec_hex() { //converte de decimal para hexadecimal
     printf("Decimal -> Hexadecimal\n");
-    printf("----------------------------------\n");
+    printf("--------------------------------------\n");
     
     int i, dec;
     char hex[200];
@@ -178,9 +178,9 @@ void dec_hex() { //converte de decimal para hexadecimal
                 check = false;
                 system("cls");
                 printf("Decimal -> Hexadecimal\n");
-                printf("-------------------------------------\n");
-                printf(">Caracter invalido! Insira novamente<\n");
-                printf("-------------------------------------\n");
+                printf("--------------------------------------\n");
+                printf(">Caractere inválido! Insira novamente<\n");
+                printf("--------------------------------------\n");
                 break;
             }
             else if(dec_prov[i + 1] == '\0') {
@@ -315,15 +315,15 @@ void dec_hex() { //converte de decimal para hexadecimal
 }
 
 void bin_dec() { //converte de binario para decimal 
-    printf("Binario -> Decimal\n");
-    printf("----------------------------------\n");
+    printf("Binário -> Decimal\n");
+    printf("--------------------------------------\n");
     
     int i, dec, n_casas;
     char bin[50];
     bool check = false;
 
     while(check == false) { //checa se os algarismos estao de acordo com os algarismos binarios
-        printf("Binario: ");
+        printf("Binário: ");
         scanf("%s", bin);
 
         i = 0;
@@ -331,10 +331,10 @@ void bin_dec() { //converte de binario para decimal
             if(isalpha(bin[i]) || (bin[i] - '0') > 1 || (bin[i] - '0') < 0) {
                 check = false;
                 system("cls");
-                printf("Binario -> Decimal\n");
-                printf("-------------------------------------\n");
-                printf(">Caracter invalido! Insira novamente<\n");
-                printf("-------------------------------------\n");
+                printf("Binário -> Decimal\n");
+                printf("--------------------------------------\n");
+                printf(">Caractere inválido! Insira novamente<\n");
+                printf("--------------------------------------\n");
                 break;
             }
             else if(bin[i + 1] == '\0') {
@@ -361,17 +361,17 @@ void bin_dec() { //converte de binario para decimal
     }
     
     system("cls");
-    printf("Binario -> Decimal\n");
-    printf("-------------------------------------\n");
-    printf("Binario: %s\n", bin);
+    printf("Binário -> Decimal\n");
+    printf("--------------------------------------\n");
+    printf("Binário: %s\n", bin);
     printf("Decimal: %d", dec); //imprime o decimal
-    printf("\n----------------------------------");
+    printf("\n--------------------------------------");
 }
 
 void bin_oct() { //Converte de binario para octal
 
-    printf("Binario -> Octal\n");
-    printf("----------------------------------\n");
+    printf("Binário -> Octal\n");
+    printf("--------------------------------------\n");
     
     int i, dec, oct, pos, quant, n_casas, quant_lim;
     int bin_fmt[50]; //armazena o binario como inteiro
@@ -380,7 +380,7 @@ void bin_oct() { //Converte de binario para octal
     bool check = false;
 
     while(check == false) { //checa se os algarismos estao de acordo com os algarismos binarios
-        printf("Binario: ");
+        printf("Binário: ");
         scanf("%s", bin_usr);
 
         i = 0;
@@ -388,10 +388,10 @@ void bin_oct() { //Converte de binario para octal
             if(isalpha(bin_usr[i]) || (bin_usr[i] - '0') > 1 || (bin_usr[i] - '0') < 0) {
                 check = false;
                 system("cls");
-                printf("Binario -> Octal\n");
-                printf("-------------------------------------\n");
-                printf(">Caracter invalido! Insira novamente<\n");
-                printf("-------------------------------------\n");
+                printf("Binário -> Octal\n");
+                printf("--------------------------------------\n");
+                printf(">Caractere inválido! Insira novamente<\n");
+                printf("--------------------------------------\n");
                 break;
             }
             else if(bin_usr[i + 1] == '\0') {
@@ -403,9 +403,9 @@ void bin_oct() { //Converte de binario para octal
     } 
 
     system("cls");
-    printf("Binario -> Octal\n");
-    printf("-------------------------------------\n");
-    printf("Binario: %s\n", bin_usr);
+    printf("Binário -> Octal\n");
+    printf("--------------------------------------\n");
+    printf("Binário: %s\n", bin_usr);
     printf("Octal: ");
 
     n_casas = 0;
@@ -474,7 +474,7 @@ void bin_oct() { //Converte de binario para octal
 }
 
 void bin_hex() { //converte de binario para hexadecimal
-    printf("Binario -> Hexadecimal\n");
+    printf("Binário -> Hexadecimal\n");
     printf("----------------------------------\n");
     
     int i, dec, pos, quant, n_casas, quant_lim;
@@ -484,7 +484,7 @@ void bin_hex() { //converte de binario para hexadecimal
     bool check = false;
 
     while(check == false) { //checa se os algarismos estao de acordo com os algarismos binarios
-        printf("Binario: ");
+        printf("Binário: ");
         scanf("%s", bin_usr);
 
         i = 0;
@@ -492,10 +492,10 @@ void bin_hex() { //converte de binario para hexadecimal
             if(isalpha(bin_usr[i]) || (bin_usr[i] - '0') > 1 || (bin_usr[i] - '0') < 0) {
                 check = false;
                 system("cls");
-                printf("Binario -> Hexadecimal\n");
-                printf("-------------------------------------\n");
-                printf(">Caracter invalido! Insira novamente<\n");
-                printf("-------------------------------------\n");
+                printf("Binário -> Hexadecimal\n");
+                printf("--------------------------------------\n");
+                printf(">Caractere inválido! Insira novamente<\n");
+                printf("--------------------------------------\n");
                 break;
             }
             else if(bin_usr[i + 1] == '\0') {
@@ -507,9 +507,9 @@ void bin_hex() { //converte de binario para hexadecimal
     } 
 
     system("cls");
-    printf("Binario -> Hexadecimal\n");
-    printf("-------------------------------------\n");
-    printf("Binario: %s\n", bin_usr);
+    printf("Binário -> Hexadecimal\n");
+    printf("--------------------------------------\n");
+    printf("Binário: %s\n", bin_usr);
     printf("Hexadecimal: ");
 
     n_casas = 0;
@@ -603,7 +603,7 @@ void bin_hex() { //converte de binario para hexadecimal
                         printf("F");
                         break;
                     default:
-                        if(reg == true) { //sÃ³ permite imprimir caso nao seja um zero a esquerda
+                        if(reg == true) { //só permite imprimir caso nao seja um zero a esquerda
                             printf("%d", dec);
                             break;
                         }
@@ -617,12 +617,12 @@ void bin_hex() { //converte de binario para hexadecimal
             pos--;
         }
     }
-    printf("\n----------------------------------");
+    printf("\n--------------------------------------");
 }
 
 void hex_dec() { //converte de hexadecimal para decimal  
     printf("Hexadecimal -> Decimal\n");
-    printf("----------------------------------\n");
+    printf("--------------------------------------\n");
     
     int i, dec, n_alg;
     char hex[50];
@@ -651,9 +651,9 @@ void hex_dec() { //converte de hexadecimal para decimal
             if(check == false) {
                 system("cls");
                 printf("Hexadecimal -> Decimal\n");
-                printf("-------------------------------------\n");
-                printf(">Caracter invalido! Insira novamente<\n");
-                printf("-------------------------------------\n");
+                printf("--------------------------------------\n");
+                printf(">Caractere inválido! Insira novamente<\n");
+                printf("--------------------------------------\n");
                 break;
             }
             ++i;
@@ -702,15 +702,15 @@ void hex_dec() { //converte de hexadecimal para decimal
     
     system("cls");
     printf("Hexadecimal -> Decimal\n");
-    printf("-------------------------------------\n");
+    printf("--------------------------------------\n");
     printf("Hexadecimal: %s\n", hex);
     printf("Decimal: %d", dec); //imprime o numero decimal
-    printf("\n----------------------------------");
+    printf("\n--------------------------------------");
 }
 
 void hex_bin() { //converte de hexadecimal para binario
-    printf("Hexadecimal -> Binario\n");
-    printf("-------------------------------------\n");
+    printf("Hexadecimal -> Binário\n");
+    printf("--------------------------------------\n");
 
     int i;
     char hex[50];
@@ -737,10 +737,10 @@ void hex_bin() { //converte de hexadecimal para binario
 
             if(check == false) {
                 system("cls");
-                printf("Hexadecimal -> Binario\n");
-                printf("-------------------------------------\n");
-                printf(">Caracter invalido! Insira novamente<\n");
-                printf("-------------------------------------\n");
+                printf("Hexadecimal -> Binário\n");
+                printf("--------------------------------------\n");
+                printf(">Caractere inválido! Insira novamente<\n");
+                printf("--------------------------------------\n");
                 break;
             }
             ++i;
@@ -748,10 +748,10 @@ void hex_bin() { //converte de hexadecimal para binario
     } 
 
     system("cls");
-    printf("Hexadecimal -> Binario\n");
-    printf("-------------------------------------\n");
+    printf("Hexadecimal -> Binário\n");
+    printf("--------------------------------------\n");
     printf("Hexadecimal: %s\n", hex);
-    printf("Binario: ");
+    printf("Binário: ");
 
     if(hex[0] == '0' && hex[1] == '\0') { 
         printf("0");
@@ -843,17 +843,128 @@ void hex_bin() { //converte de hexadecimal para binario
             ++i;
         }
     }
-    printf("\n----------------------------------");
+    printf("\n--------------------------------------");
 }
 
-void hex_oct() {
-
-    
-
-}
+void hex_oct() {} //TBA
 
 void oct_dec() {} //TBA
 
-void oct_bin() {} //TBA
+void oct_bin() {
+    
+    char oct[50];
+    bool oct_typo = false;
+
+    printf("Octal -> Binário\n");
+    printf("--------------------------------------\n");
+    printf("Octal: ");
+    
+    while(oct_typo == false) {
+
+        scanf("%s", oct);
+        
+        int i = 0;
+        while(oct[i] != '\0') {
+            if((oct[i] - '0') < 0 || (oct[i] - '0') > 7 || isalpha(oct[i])) {
+                oct_typo = false;
+                system("cls");
+                printf("Octal -> Binário\n");
+                printf("--------------------------------------\n");
+                printf(">Caractere inválido! Insira novamente<\n");
+                printf("--------------------------------------\n");
+                printf("Octal: ");
+                break;
+            }
+            if(oct[i + 1] == '\0' && ( (oct[i] - '0') >= 0) && ( (oct[i] - '0') <= 7 ) && isalnum(oct[i]) ) {
+                oct_typo = true;
+            } 
+            ++i;
+        }
+        
+    }
+
+    system("cls");
+    printf("Octal -> Binário\n");
+    printf("--------------------------------------\n");
+    printf("Octal: %s\n", oct);
+    printf("Binário: ");
+
+    int i = 0;
+    bool check_zero = false;
+    while(oct[i] != '\0') {
+        
+        switch(oct[i]) {
+            
+            case '0':
+                if(i != 0 && check_zero == true) {
+                    printf("000");
+                }
+                if(i == 0 && (oct[i + 1] == '\0') && oct[i] == '0') {
+                    printf("0");
+                }
+                break;
+            case '1':
+
+                if(i == 0 || check_zero == false) {
+                    check_zero = true;
+                    printf("1");
+                }
+                else{
+                    printf("001");
+                }
+                break;
+            
+            case '2':
+
+                if(i == 0 || check_zero == false) {
+                    check_zero = true;
+                    printf("10");
+                }
+                else{
+                    printf("010");
+                }    
+                break;
+            
+            case '3':
+
+                if(i == 0 || check_zero == false) {
+                    check_zero = true;
+                    printf("11");
+                }
+                else{
+                    printf("011");
+                }
+                break;
+            
+            case '4':
+
+                printf("100");
+                break;
+
+            case '5':
+
+                printf("101");
+                break;
+            
+            case '6':
+
+                printf("110");
+                break;
+            
+            case '7':
+
+                printf("111");
+                break;
+
+            default:
+
+                printf("Erro!");
+                break;
+            
+        }
+        ++i;
+    }
+
+}
 
 void oct_hex() {} //TBA
