@@ -1,14 +1,15 @@
-# Conversor de Bases NumÈricas
-    Conversor de bases numÈricas executado em console. Converte um n˙mero em determinada base para a seguinte base escolhida. 
+# Conversor de Bases Num√©ricas
+Conversor de bases num√©ricas executado em console. Converte um n√∫mero em determinada base para outra base escolhida! 
 
-### **As bases disponÌveis para convers„o s„o:** 
-- Bin·ria
+### **Bases dispon√≠veis para convers√£o s√£o:** 
+- Bin√°ria
 - Octal 
 - Decimal 
 - Hexadecimal 
 
 
 ## **Capturas de tela**
-![Menu Principal](.\Midias/Menu_Principal.png)
 
-![Convers„o Exemplo](.\Midias/Conversao_Exemplo.png)
+Menu Principal             | Exemplo de Convers√£o
+:-------------------------:|:-------------------------:
+![](Midias/Menu_Principal.png)  |  ![](Midias/Conversao_Exemplo.png)
